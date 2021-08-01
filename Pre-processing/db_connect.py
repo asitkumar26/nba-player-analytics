@@ -8,7 +8,9 @@ from sqlalchemy import create_engine
 
 # fill in your respective db_name, db_user_name and db_password
 
-db_name = 'NBA_Stats_Salaries' ##### Write your db_name
+
+db_name = 'NBA_PLAYER_ANALYTICS' ##### Write your db_name
+
 db_user_name= 'postgres'  ####Write your user id
 db_password= 'Asit1973?' ### Write your password
 
