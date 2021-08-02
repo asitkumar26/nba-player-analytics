@@ -183,3 +183,4 @@ VAlUES ('irvinky01', '2018', '20099189');
 
 INSERT INTO PLAYERS_SALARY_F
 VAlUES ('belinma01', '2018', '6153846');
+
