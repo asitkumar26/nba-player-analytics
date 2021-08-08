@@ -1,10 +1,11 @@
-
+CREATE TABLE PLAYERS_D (
+  Player_id VARCHAR(9) NOT NULL PRIMARY KEY,
+  Player_name VARCHAR(55) NOT NULL
+);
 
 CREATE TABLE PLAYERS_STATS_F (
-
-
   player_id VARCHAR(9) NOT NULL,
-  year INT NOT NULL,
+  playing_season INT NOT NULL,
   position VARCHAR(10) NOT NULL,
   age INT NOT NULL,
   team VARCHAR(5) NOT NULL,
@@ -24,11 +25,22 @@ CREATE TABLE PLAYERS_STATS_F (
   turnovers FLOAT NOT NULL,
   points FLOAT NOT NULL,
   assist_to_turnover_ratio FLOAT NOT NULL,
-  PRIMARY KEY (player_id, year),
-  CONSTRAINT (fk_player_id_stats)
+  PRIMARY KEY (player_id, playing_season),
+  CONSTRAINT fk_player_id_stats
     FOREIGN KEY (player_id)
       REFERENCES PLAYERS_D(player_id)
-  );
+);
+
+CREATE TABLE PLAYERS_SALARY_F (
+  Player_id VARCHAR(9) NOT NULL,
+  playing_season INT NOT NULL,
+  Salary FLOAT NOT NULL,
+  PRIMARY KEY (player_id, playing_season),
+  CONSTRAINT fk_player_id_salary
+    FOREIGN KEY (player_id)
+      REFERENCES PLAYERS_D(player_id)
+);
+
 /*
 #This is an old create table script for the players_stats_f table, column names were incorrect
   Player_id VARCHAR(9) NOT NULL,
@@ -53,22 +65,6 @@ CREATE TABLE PLAYERS_STATS_F (
   PTS FLOAT NOT NULL,
   ATO FLOAT NOT NULL
 */
-
-CREATE TABLE PLAYERS_D (
-  Player_id VARCHAR(9) NOT NULL PRIMARY KEY,
-  Player_name VARCHAR(55) NOT NULL,
-);
-
-CREATE TABLE PLAYERS_SALARY_F (
-  Player_id VARCHAR(9) NOT NULL PRIMARY KEY,
-  Year INT NOT NULL,
-  Salary FLOAT NOT NULL,
-  PRIMARY KEY (player_id, year),
-  CONSTRAINT (fk_player_id_salary)
-    FOREIGN KEY (player_id)
-      REFERENCES PLAYERS_D(player_id)
-);
-
 
 CREATE TABLE players_category_reporting (
 
