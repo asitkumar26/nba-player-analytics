@@ -23,7 +23,31 @@ A Colorado Board of Elections employee has given you the following tasks to comp
 - Dashboards: Tableau
 
 ## Project Summary
+### Dashboard
 The Dashboard that can be used for viewing and comparing a player stats and salary info will be as follows 
 - Dashboard Landing Page Mockup: ![LandingPageMockup](Analysis/Dashboards/DashboardLandingPageMockup.png)
 - Dashboard Player Career Stats Page Mockup: ![PlayerCareerStatsPageMockup](Analysis/Dashboards/PlayerCareerStatsMockup.png)
 - Dashboard Players Stats Page for Comparison Mockup: ![PlayerStatsPageMockup](Analysis/Dashboards/PlayerStatsMockup.png)
+
+### Machine Learning
+1. Un-supervised Learning for clustering players based on their player statistics:
+- Description of preliminary data processing:
+	- Both player salary and player statistics data need to be referenced from database (Status – In- progress)
+	- Consider players who have played all 4 seasons (2016-17, 2018-19,2019-20,2020-21) for machine learning (Status – In-progress)
+	- Join player statistics and  player salary and average the stats and salary per player (Status - Complete)
+	- Use all player statistics for clustering them through KMeans Model (Status - Complete)
+	- Derive category  of players as player tiers based on the average salary per cluster (Status - Complete)
+- The code git hub link is as follows:
+  http://localhost:8888/notebooks/player-clustering.ipynb
+ - Reason why player statics only considered as feature:
+  - Player statistics like ‘np_of_ghames-played’, ‘no_minutes_played’, ‘field_goals_pctg’, ‘three_point_pctg’,      ‘effective_field_goal_pctg’,  ‘free_throws_pctg’, ‘ total_rebounds’ ,’ no_of_assists’ ,’ no_of_steals’,
+  ‘no_of_blocks’,’ no_of_turnovers’, ‘points’ have been considered as features for clustering since these features reflect 
+  the player’s performance. This data is fed to Kmeans as features. 
+- Why KMeans us used, its advantage and limitations:
+	- KMeans is one of the most popular algoritm for un-supervised learning to find patterns and cluster them. 
+	- Benefits  of Kmeans –  Simple to implement and  scales to large datasets
+	- Limitations of Kmeans -  Choosing K Manually to find optimal K. It is always a trial and error method to find the   optimal K. 
+- Conclusion
+  - This whole machine learning modeling is coded on the top of sample data. The value of K will change once the real       data gets pulled   in.
+
+  
