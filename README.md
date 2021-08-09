@@ -30,7 +30,7 @@ The Dashboard that can be used for viewing and comparing a player stats and sala
 - Dashboard Players Stats Page for Comparison Mockup: ![PlayerStatsPageMockup](Analysis/Dashboards/PlayerStatsMockup.png)
 
 ### Machine Learning
-1. Un-supervised Learning for clustering players based on their player statistics:
+Un-supervised Learning for clustering players based on their player statistics:
 - Description of preliminary data processing:
 	- Both player salary and player statistics data need to be referenced from database (Status – In- progress)
 	- Consider players who have played all 4 seasons (2016-17, 2018-19,2019-20,2020-21) for machine learning (Status – In-progress)
