@@ -30,6 +30,24 @@ Branches for each teammate is
 - Dashboards: Tableau
 
 ## Project Summary
+### Data 
+Data Discovery and Analysis
+- NBA Player Stats and Salary Info for 4 years from 2016-2019 were downloaded from Kaggle as 6 files. They were in 4 different formats. 
+	- Files had NBA player stats information for 4 years. They were in two different formats
+	- Files has NBA Salary information for many years and in two different formats
+- Data files were cleaned and merged into two files 
+ 	- NBA Player Stats info for 4 years
+	- NBA Salary info for 4 years
+Data Cleanup Tasks
+- Split player column into two columns: player_id and player_name 
+- Multiple rows exist for a player who is traded mid-season. 
+    - Filter and keep the relevant row that has the total for the season
+    - Add Salary from both teams and save it
+- Convert Salary column to float after removing ‘$’ and space
+- Add playing season as additional column
+- Fill null values with 0 for stats and salary. 
+- Pick the columns that is needed for analysis and rename them to match sql database design
+
 ### Dashboard
 The Dashboard that can be used for viewing and comparing a player stats and salary info will be as follows 
 - Dashboard Landing Page Mockup: ![LandingPageMockup](Analysis/Dashboards/DashboardLandingPageMockup.png)
