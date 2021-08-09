@@ -46,6 +46,7 @@ NBA Player Stats and Salary Info for 4 years from 2016-2019 were downloaded from
 - Add playing season as additional column
 - Fill null values with 0 for stats and salary. 
 - Pick the columns that is needed for analysis and rename them to match sql database design
+The link that has Data Cleanup or ETL Steps performed were https://github.com/asitkumar26/nba-player-analytics/blob/main/Presentation/ETLSteps.xlsx
 
 ### Dashboard
 The Dashboard that can be used for viewing and comparing a player stats and salary info will be as follows 
