@@ -6,6 +6,12 @@ There is a new club that wants to build a team and they want to sign up contract
 A Colorado Board of Elections employee has given you the following tasks to complete the election audit of a recent local congressional election. 
 2. Also the club wanted to know whether a players salary is going to increase, decrease or remains similar in next subsequent seasons based on his performance statistics in NBA. This part of the project can help players who want to predict their salary. 
 
+## Team
+1. Asit M
+2. Dave S
+3. Dhana D
+4. Rajesh R
+
 ## Resources 
 - Data Source Files for NBA Player Stats
   - NBA Players Stats 201617.csv
