@@ -32,9 +32,9 @@ Branches for each teammate is
 ## Project Summary
 ### Data 
 Data Discovery and Analysis
-- NBA Player Stats and Salary Info for 4 years from 2016-2019 were downloaded from Kaggle as 6 files. They were in 4 different formats. 
-	- Files had NBA player stats information for 4 years. They were in two different formats
-	- Files has NBA Salary information for many years and in two different formats
+NBA Player Stats and Salary Info for 4 years from 2016-2019 were downloaded from Kaggle as 6 files. They were in 4 different formats. 
+- Files had NBA player stats information for 4 years. They were in two different formats
+- Files has NBA Salary information for many years and in two different formats
 - Data files were cleaned and merged into two files 
  	- NBA Player Stats info for 4 years
 	- NBA Salary info for 4 years
