@@ -16,6 +16,13 @@ A Colorado Board of Elections employee has given you the following tasks to comp
  - NBA Players Stats 201819.csv
  - NBA_salaries_2019_present.csv
 
+## Branches
+Branches for each teammate is 
+- asit-modifications
+- dave-modifications
+- dhana-modifications
+- rajesh-modifications
+
 ## Software
 - DataCleanup: Python 3.8.5 Visual Studio Code, 1.54.1
 - Database: SQL
