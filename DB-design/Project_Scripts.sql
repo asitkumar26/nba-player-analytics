@@ -41,35 +41,12 @@ CREATE TABLE PLAYERS_SALARY_F (
       REFERENCES PLAYERS_D(player_id)
 );
 
-/*
-#This is an old create table script for the players_stats_f table, column names were incorrect
-  Player_id VARCHAR(9) NOT NULL,
-  Year INT NOT NULL,
-  Pos VARCHAR(10) NOT NULL,
-  Age INT NOT NULL,
-  Team VARCHAR(5) NOT NULL,
-  GP INT NOT NULL,
-  MP FLOAT NOT NULL,
-  FGM FLOAT NOT NULL,
-  FG_PER FLOAT NOT NULL,
-  THREE_PM FLOAT NOT NULL,
-  THREE_PA FLOAT NOT NULL,
-  THREE_PPER FLOAT NOT NULL,
-  eFG_PER FLOAT NOT NULL,
-  FT_PER FLOAT NOT NULL,
-  TRB FLOAT NOT NULL,
-  AST FLOAT NOT NULL,
-  STL FLOAT NOT NULL,
-  BLK FLOAT NOT NULL,
-  TURNOVER FLOAT NOT NULL,
-  PTS FLOAT NOT NULL,
-  ATO FLOAT NOT NULL
-*/
 
 CREATE TABLE players_category_reporting (
 
   cluster varchar(10) NOT NULL, 
   player_id VARCHAR(9) NOT NULL,
+  player_positions VARCHAR(100) NOT NULL,	
   no_of_games_played INT NOT NULL,
   no_of_minutes_played FLOAT NOT NULL,
   field_goals_percentage FLOAT NOT NULL,
