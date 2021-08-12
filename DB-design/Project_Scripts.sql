@@ -64,3 +64,13 @@ CREATE TABLE players_category_reporting (
   PRIMARY KEY (player_id)
   
   );
+  
+  
+  
+  CREATE TABLE nba_per_year_salary_cap (
+
+  playing_season INT NOT NULL, 
+  Salary FLOAT NOT NULL,	
+  PRIMARY KEY (playing_season)
+  
+  );
