@@ -64,42 +64,55 @@ The Dashboard that can be used for viewing and comparing a player stats and sala
 - Dashboard Players Stats Page for Comparison Mockup: ![PlayerStatsPageMockup](Analysis/Dashboards/PlayerStatsMockup.png)
 
 ### Machine Learning
-Un-supervised Learning for clustering players based on their player statistics:
+**Un-supervised Learning for clustering players based on their player statistics:**
 - Description of preliminary data processing:
 	- Both player salary and player statistics data need to be referenced from database (Status – In- progress)
 	- Consider players who have played all 4 seasons (2016-17, 2018-19,2019-20,2020-21) for machine learning (Status – In-progress)
 	- Join player statistics and  player salary and average the stats and salary per player (Status - Complete)
 	- Use all player statistics for clustering them through KMeans Model (Status - Complete)
 	- Derive category  of players as player tiers based on the average salary per cluster (Status - Complete)
+	
 - The code git hub link is as follows:
   http://localhost:8888/notebooks/player-clustering.ipynb
- - Reason why player statics only considered as feature:
-  - Player statistics like ‘np_of_ghames-played’, ‘no_minutes_played’, ‘field_goals_pctg’, ‘three_point_pctg’,      ‘effective_field_goal_pctg’,  ‘free_throws_pctg’, ‘ total_rebounds’ ,’ no_of_assists’ ,’ no_of_steals’,
-  ‘no_of_blocks’,’ no_of_turnovers’, ‘points’ have been considered as features for clustering since these features reflect 
-  the player’s performance. This data is fed to Kmeans as features. 
+  
+ -  Description of Feature Engineering and Feature Selection:
+ 	-   Player statistics like ‘np_of_ghames-played’, ‘no_minutes_played’, ‘field_goals_pctg’, ‘three_point_pctg’, ’effective_field_goal_pctg’,  ‘free_throws_pctg’, ‘ total_rebounds’ ,’ no_of_assists’ ,’ no_of_steals’, ‘no_of_blocks’, ’ no_of_turnovers’, ‘points’ have been considered as features for clustering since these features reflect the player’s performance. This data is fed to Kmeans as features. 
+
 - Why KMeans us used, its advantage and limitations:
 	- KMeans is one of the most popular algoritm for un-supervised learning to find patterns and cluster them. 
 	- Benefits  of Kmeans –  Simple to implement and  scales to large datasets
 	- Limitations of Kmeans -  Choosing K Manually to find optimal K. It is always a trial and error method to find the   optimal K. 
-- Conclusion
-  - This whole machine learning modeling is coded on the top of sample data. The value of K will change once the real       data gets pulled   in.
 
-Supervised Learning to predict whether Player’s salary hike will happen or not: 
+
+**Supervised Learning to predict whether Player’s salary hike will happen or not: **
 - Description of preliminary data processing:– 
 	- Both player salary and player statistics data need to be referenced from database (Status – In- progress)
 	- Consider players who have played all 4 seasons (2016-17, 2018-19,2019-20,2020-21) for machine learning (Status – In-progress)
 	- Join player statistics and  player salary and average the stats and salary per player (Status - Complete)
 	- Label the ‘Salary Increased or not’ by comparing the last year Vs First year salary of the players (Status – In-progress)
 	- Train and Test the model through Random forest. 
+	
 - The code git hub link is as follows:  http://localhost:8888/notebooks/player-salaryraise-predictions.ipynb
-- Reason why player statics only considered as feature:-
-	-  Player statistics like ‘np_of_ghames-played’, ‘no_minutes_played’, ‘field_goals_pctg’, ‘three_point_pctg’,      ‘effective_field_goal_pctg’,  ‘free_throws_pctg’, ‘ total_rebounds’ ,’ no_of_assists’ ,’ no_of_steals’,
-  ‘no_of_blocks’,’ no_of_turnovers’, ‘points’ , ‘salary_increased_or_not’ have been considered as features for training and testing.
-- Why Random Forest is used, its advantage and limitations:- 
-	- Randomforest  is one of the most popular algoritm for supervised learning to do more accurate predictions.
-	- Benefits  of Kmeans –  Simple to implement and since it builds multiple decision trees and merges them together to get more accurate and stable decisions.
-	- Limitations of Random Forest -  Need to be carefully observed because it has a chance of overfitting the model.
-Conclusion:- 
-	- This whole machine learning modeling is coded on the top of sample data. The accuracy and confusion metrics will change once the model is trained with real data.
+
+- Description of Feature Engineering and Feature Selection:
+	- A round of feature dependencies has been studied using ‘feature_importances_’. The features that had the least dependencies on predictions have been dropped from feature selections. 
+
+	- Refer to the URL to see how the feature dependencies in order to predict the model. https://github.com/asitkumar26/nba-player-analytics/blob/main/ML-Models/Feature-Depnedencies-Supervised_learning.PNG
+
+- Models used for Supervised Learning, its advantage and limitations:
+	- Randomforest  is one of the most popular algoritm for supervised learning to do more accurate predictions.
+ 	- Benefits  of Random Forest –  Simple to implement and since it builds multiple decision trees and merges them together to get more accurate and stable decisions.
+	- Limitations of Random Forest -  Need to be carefully observed because it has a chance of overfitting the model.
+
+- Explanation of Model Choices:
+	- Two models were tried out ‘Random Forest’ and ‘Logistic Regression’. But Random Forest provided better score. Hence chosen the ‘Random Forest’ for final model.   
+
+- Description how they have been trained in the model:
+	- Few of the techniques used to train to improve the model accuracy. They are:
+		- Features like ‘Games Played’ and ‘Minutes Played’ have been scaled through MinMaxScalar.
+                - Some of the features like ‘salary’ and ‘blocks’  have been dropped because their depnednecies on predictions 	were least.
+
+- Description of Current Accuracy Score:    
+	- Find the accuracy score and the Confusion Metrics from ‘Random Forest’ through following URL. https://github.com/asitkumar26/nba-player-analytics/blob/main/ML-Models/Model-Accuracy-Score-SupervisedLearning.PNG
 
   
