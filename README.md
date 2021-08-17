@@ -83,7 +83,6 @@ The Dashboard that can be used for viewing and comparing a player stats and sala
 	- Benefits  of Kmeans –  Simple to implement and  scales to large datasets
 	- Limitations of Kmeans -  Choosing K Manually to find optimal K. It is always a trial and error method to find the   optimal K. 
 
-
 **Supervised Learning to predict whether Player’s salary hike will happen or not: **
 - Description of preliminary data processing:– 
 	- Both player salary and player statistics data need to be referenced from database (Status – In- progress)
