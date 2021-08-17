@@ -29,9 +29,9 @@ Branches for each teammate is
 - dhana-modifications
 - rajesh-modifications
 
-## Software
-- DataCleanup: Python 3.8.5 Visual Studio Code, 1.54.1
-- Database: SQL
+## Technology
+- DataCleanup: Python 3.8.5, Jupyter Notebook, Visual Studio Code, 1.54.1
+- Database: Postgres SQL
 - Machine Learning: Python
 - Dashboards: Tableau
 
@@ -53,6 +53,9 @@ NBA Player Stats and Salary Info for 4 years from 2016-2019 were downloaded from
 - Fill null values with 0 for stats and salary. 
 - Pick the columns that is needed for analysis and rename them to match sql database design
 The link that has Data Cleanup or ETL Steps performed were https://github.com/asitkumar26/nba-player-analytics/blob/main/Presentation/ETLSteps.xlsx
+
+### Database ERD Diagram
+- ERD Diagram: ![ERD_Diagram](DB-design/ERD_NBA_Analytics.png)
 
 ### Dashboard
 The Dashboard that can be used for viewing and comparing a player stats and salary info will be as follows 
